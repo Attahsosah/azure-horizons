@@ -1,0 +1,232 @@
+{
+  "meta": {
+    "title": "Azure Horizons — Luxury Travel",
+    "titleTemplate": "%s · Azure Horizons",
+    "description": "Cinematic journeys to the world's most extraordinary destinations. Begin the voyage before you book."
+  },
+  "nav": {
+    "destinations": "Destinations",
+    "packages": "Packages",
+    "experiences": "Experiences",
+    "about": "About",
+    "book": "Book a journey",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "primaryLabel": "Primary",
+    "signIn": "Sign in",
+    "account": "Account"
+  },
+  "languageSwitcher": {
+    "label": "Language",
+    "select": "Select language"
+  },
+  "hero": {
+    "badge": "Bespoke luxury journeys",
+    "title": "Azure Horizons",
+    "subtitle": "Cinematic journeys to the world's most extraordinary destinations — begin the voyage before you book.",
+    "ctaPrimary": "Begin the voyage",
+    "ctaSecondary": "Explore destinations",
+    "cardLabel": "Localized shell",
+    "cardBody": "English and French routes, an accessible navigation system, and reduced-motion-aware smooth scrolling — all from one config."
+  },
+  "footer": {
+    "tagline": "Cinematic journeys, thoughtfully arranged.",
+    "explore": "Explore",
+    "company": "Company",
+    "legal": "Legal",
+    "about": "About us",
+    "careers": "Careers",
+    "press": "Press",
+    "privacy": "Privacy",
+    "terms": "Terms",
+    "cookies": "Cookies",
+    "rights": "All rights reserved."
+  },
+  "notFound": {
+    "title": "This horizon is out of reach",
+    "body": "The page you're looking for has drifted off the map. Let's get you back to familiar waters.",
+    "cta": "Return home"
+  },
+  "error": {
+    "title": "Something went off course",
+    "body": "An unexpected error interrupted your journey. Try again, and we'll set sail once more.",
+    "retry": "Try again"
+  },
+  "common": {
+    "loading": "Loading",
+    "skipToContent": "Skip to content"
+  },
+  "sections": {
+    "featured": {
+      "eyebrow": "Featured",
+      "title": "Signature destinations",
+      "description": "A handpicked collection of the places our travellers return to again and again."
+    },
+    "explorer": {
+      "eyebrow": "Explore",
+      "title": "Find your horizon",
+      "description": "Filter by the kind of journey you're dreaming of.",
+      "all": "All",
+      "empty": "No destinations match that filter yet."
+    },
+    "packages": {
+      "eyebrow": "Curated packages",
+      "title": "Ready-made journeys",
+      "description": "Starting points, each shaped around you once you book.",
+      "cta": "View package"
+    },
+    "testimonials": {
+      "eyebrow": "In their words",
+      "title": "Travellers on Azure Horizons",
+      "description": "A few notes from recent journeys."
+    },
+    "faq": {
+      "eyebrow": "Good to know",
+      "title": "Frequently asked questions",
+      "description": "Everything you need before you begin."
+    },
+    "contact": {
+      "eyebrow": "Talk to us",
+      "title": "Design your journey",
+      "description": "Tell us what you have in mind and a travel designer will be in touch.",
+      "name": "Name",
+      "email": "Email",
+      "subject": "Subject",
+      "message": "Message",
+      "send": "Send message",
+      "sending": "Sending…",
+      "success": "Thank you — we'll be in touch shortly.",
+      "error": "Something went wrong. Please try again."
+    },
+    "newsletter": {
+      "eyebrow": "Stay inspired",
+      "title": "Join the journal",
+      "description": "Occasional dispatches on new destinations and quiet-season openings.",
+      "placeholder": "you@example.com",
+      "subscribe": "Subscribe",
+      "success": "You're on the list.",
+      "error": "That didn't work. Check your email and try again."
+    },
+    "categories": {
+      "eyebrow": "Ways to travel",
+      "title": "Journeys by mood",
+      "description": "However you like to travel, there's a horizon for it."
+    },
+    "experiences": {
+      "eyebrow": "Signature moments",
+      "title": "Popular experiences",
+      "description": "The moments our travellers remember most."
+    },
+    "partners": {
+      "eyebrow": "In good company",
+      "title": "Our partners",
+      "description": "We work with some of the finest hotels, airlines, and guides in the world."
+    },
+    "whyus": {
+      "eyebrow": "Why Azure Horizons",
+      "title": "Travel, elevated",
+      "description": "The difference is in the details — and in who handles them.",
+      "items": {
+        "tailored": {
+          "title": "Tailored to you",
+          "body": "Every itinerary is designed around your pace, taste, and interests."
+        },
+        "access": {
+          "title": "Rare access",
+          "body": "Private openings, hard-to-book tables, and doors that stay closed to most."
+        },
+        "care": {
+          "title": "End-to-end care",
+          "body": "One travel designer, reachable throughout, anticipating every need."
+        },
+        "expertise": {
+          "title": "Real expertise",
+          "body": "Destinations we know first-hand, not from a brochure."
+        }
+      }
+    },
+    "gallery": {
+      "eyebrow": "A glimpse",
+      "title": "The Azure Horizons gallery",
+      "description": "Scenes from journeys around the world."
+    },
+    "labels": {
+      "from": "From",
+      "nights": "nights"
+    }
+  },
+  "tiers": {
+    "comfort": "Comfort",
+    "premium": "Premium",
+    "ultra": "Ultra-luxe"
+  },
+  "detail": {
+    "overview": "Overview",
+    "included": "What's included",
+    "relatedPackages": "Related packages",
+    "startBooking": "Start booking",
+    "backToDestinations": "All destinations",
+    "backToPackages": "All packages",
+    "viewDestination": "View destination",
+    "destinationsEyebrow": "Explore",
+    "destinationsTitle": "All destinations",
+    "destinationsDescription": "The full Azure Horizons collection.",
+    "packagesEyebrow": "Curated",
+    "packagesTitle": "All packages",
+    "packagesDescription": "Ready-made journeys to make your own."
+  },
+  "wishlist": {
+    "eyebrow": "Saved",
+    "title": "Your wishlist",
+    "description": "Destinations and packages you've saved for later.",
+    "empty": "Nothing saved yet. Tap the heart on any destination or package to add it here.",
+    "save": "Save",
+    "saved": "Saved",
+    "add": "Add to wishlist",
+    "remove": "Remove from wishlist"
+  },
+  "booking": {
+    "title": "Plan your journey",
+    "steps": {
+      "destination": "Destination",
+      "dates": "Dates",
+      "guests": "Guests",
+      "budget": "Budget",
+      "package": "Package",
+      "review": "Review"
+    },
+    "startDate": "Arrival",
+    "endDate": "Departure",
+    "guestsLabel": "travellers",
+    "noPackages": "No set packages here — we'll tailor one for you.",
+    "noPreference": "No preference — surprise me",
+    "back": "Back",
+    "next": "Continue",
+    "confirm": "Confirm booking",
+    "confirming": "Confirming…",
+    "successTitle": "Your journey is reserved",
+    "successBody": "A travel designer will be in touch within one business day to tailor every detail.",
+    "reference": "Reference",
+    "done": "Back to home",
+    "error": "We couldn't complete that. Please review your details and try again."
+  },
+  "auth": {
+    "signInTitle": "Welcome back",
+    "signUpTitle": "Create your account",
+    "email": "Email",
+    "password": "Password",
+    "signIn": "Sign in",
+    "signUp": "Sign up",
+    "submitting": "Please wait…",
+    "noAccount": "New here?",
+    "haveAccount": "Already have an account?",
+    "notConfigured": "Accounts aren't enabled in this environment yet.",
+    "checkEmail": "Check your email to confirm your account.",
+    "accountEyebrow": "Account",
+    "accountTitle": "Your account",
+    "signedInAs": "Signed in as",
+    "signOut": "Sign out",
+    "bookingHistory": "Booking history",
+    "noBookings": "No bookings yet — start planning a journey."
+  }
+}

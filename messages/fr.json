@@ -1,0 +1,232 @@
+{
+  "meta": {
+    "title": "Azure Horizons — Voyages de Luxe",
+    "titleTemplate": "%s · Azure Horizons",
+    "description": "Des voyages cinématographiques vers les destinations les plus extraordinaires du monde. Commencez le voyage avant même de réserver."
+  },
+  "nav": {
+    "destinations": "Destinations",
+    "packages": "Forfaits",
+    "experiences": "Expériences",
+    "about": "À propos",
+    "book": "Réserver un voyage",
+    "openMenu": "Ouvrir le menu",
+    "closeMenu": "Fermer le menu",
+    "primaryLabel": "Principal",
+    "signIn": "Se connecter",
+    "account": "Compte"
+  },
+  "languageSwitcher": {
+    "label": "Langue",
+    "select": "Choisir la langue"
+  },
+  "hero": {
+    "badge": "Voyages de luxe sur mesure",
+    "title": "Azure Horizons",
+    "subtitle": "Des voyages cinématographiques vers les destinations les plus extraordinaires du monde — commencez le voyage avant de réserver.",
+    "ctaPrimary": "Commencer le voyage",
+    "ctaSecondary": "Explorer les destinations",
+    "cardLabel": "Structure localisée",
+    "cardBody": "Des routes en anglais et en français, une navigation accessible et un défilement fluide respectant les préférences de mouvement — le tout depuis une seule configuration."
+  },
+  "footer": {
+    "tagline": "Des voyages cinématographiques, arrangés avec soin.",
+    "explore": "Explorer",
+    "company": "Entreprise",
+    "legal": "Mentions légales",
+    "about": "À propos",
+    "careers": "Carrières",
+    "press": "Presse",
+    "privacy": "Confidentialité",
+    "terms": "Conditions",
+    "cookies": "Cookies",
+    "rights": "Tous droits réservés."
+  },
+  "notFound": {
+    "title": "Cet horizon est hors de portée",
+    "body": "La page que vous cherchez a dérivé hors de la carte. Reprenons le large vers des eaux familières.",
+    "cta": "Retour à l'accueil"
+  },
+  "error": {
+    "title": "Le voyage a dévié de sa route",
+    "body": "Une erreur inattendue a interrompu votre voyage. Réessayez, et nous reprendrons le large.",
+    "retry": "Réessayer"
+  },
+  "common": {
+    "loading": "Chargement",
+    "skipToContent": "Aller au contenu"
+  },
+  "sections": {
+    "featured": {
+      "eyebrow": "À la une",
+      "title": "Destinations signature",
+      "description": "Une collection choisie des lieux où nos voyageurs reviennent encore et encore."
+    },
+    "explorer": {
+      "eyebrow": "Explorer",
+      "title": "Trouvez votre horizon",
+      "description": "Filtrez selon le type de voyage dont vous rêvez.",
+      "all": "Tous",
+      "empty": "Aucune destination ne correspond à ce filtre pour l'instant."
+    },
+    "packages": {
+      "eyebrow": "Forfaits sélectionnés",
+      "title": "Voyages clés en main",
+      "description": "Des points de départ, chacun façonné pour vous une fois réservé.",
+      "cta": "Voir le forfait"
+    },
+    "testimonials": {
+      "eyebrow": "En leurs mots",
+      "title": "Nos voyageurs témoignent",
+      "description": "Quelques mots de voyages récents."
+    },
+    "faq": {
+      "eyebrow": "Bon à savoir",
+      "title": "Questions fréquentes",
+      "description": "Tout ce qu'il faut savoir avant de commencer."
+    },
+    "contact": {
+      "eyebrow": "Parlez-nous",
+      "title": "Concevez votre voyage",
+      "description": "Dites-nous ce que vous avez en tête et un concepteur de voyage vous recontactera.",
+      "name": "Nom",
+      "email": "E-mail",
+      "subject": "Sujet",
+      "message": "Message",
+      "send": "Envoyer le message",
+      "sending": "Envoi…",
+      "success": "Merci — nous vous recontacterons très bientôt.",
+      "error": "Une erreur s'est produite. Veuillez réessayer."
+    },
+    "newsletter": {
+      "eyebrow": "Restez inspiré",
+      "title": "Rejoignez le journal",
+      "description": "Des nouvelles occasionnelles sur les nouvelles destinations et les ouvertures hors saison.",
+      "placeholder": "vous@exemple.com",
+      "subscribe": "S'abonner",
+      "success": "Vous êtes inscrit.",
+      "error": "Cela n'a pas fonctionné. Vérifiez votre e-mail et réessayez."
+    },
+    "categories": {
+      "eyebrow": "Façons de voyager",
+      "title": "Des voyages selon l'envie",
+      "description": "Quelle que soit votre façon de voyager, il existe un horizon pour vous."
+    },
+    "experiences": {
+      "eyebrow": "Moments signature",
+      "title": "Expériences populaires",
+      "description": "Les moments dont nos voyageurs se souviennent le plus."
+    },
+    "partners": {
+      "eyebrow": "En bonne compagnie",
+      "title": "Nos partenaires",
+      "description": "Nous collaborons avec certains des meilleurs hôtels, compagnies aériennes et guides au monde."
+    },
+    "whyus": {
+      "eyebrow": "Pourquoi Azure Horizons",
+      "title": "Le voyage, sublimé",
+      "description": "La différence se joue dans les détails — et dans ceux qui s'en occupent.",
+      "items": {
+        "tailored": {
+          "title": "Sur mesure",
+          "body": "Chaque itinéraire est conçu selon votre rythme, vos goûts et vos envies."
+        },
+        "access": {
+          "title": "Accès rares",
+          "body": "Ouvertures privées, tables introuvables et portes qui restent fermées à la plupart."
+        },
+        "care": {
+          "title": "Accompagnement complet",
+          "body": "Un concepteur de voyage, joignable à tout moment, anticipant chaque besoin."
+        },
+        "expertise": {
+          "title": "Une vraie expertise",
+          "body": "Des destinations que nous connaissons de première main, pas sur brochure."
+        }
+      }
+    },
+    "gallery": {
+      "eyebrow": "Un aperçu",
+      "title": "La galerie Azure Horizons",
+      "description": "Des scènes de voyages autour du monde."
+    },
+    "labels": {
+      "from": "À partir de",
+      "nights": "nuits"
+    }
+  },
+  "tiers": {
+    "comfort": "Confort",
+    "premium": "Premium",
+    "ultra": "Ultra-luxe"
+  },
+  "detail": {
+    "overview": "Aperçu",
+    "included": "Ce qui est inclus",
+    "relatedPackages": "Forfaits associés",
+    "startBooking": "Commencer la réservation",
+    "backToDestinations": "Toutes les destinations",
+    "backToPackages": "Tous les forfaits",
+    "viewDestination": "Voir la destination",
+    "destinationsEyebrow": "Explorer",
+    "destinationsTitle": "Toutes les destinations",
+    "destinationsDescription": "La collection Azure Horizons au complet.",
+    "packagesEyebrow": "Sélection",
+    "packagesTitle": "Tous les forfaits",
+    "packagesDescription": "Des voyages clés en main à personnaliser."
+  },
+  "wishlist": {
+    "eyebrow": "Enregistré",
+    "title": "Votre liste de souhaits",
+    "description": "Les destinations et forfaits que vous avez enregistrés.",
+    "empty": "Rien d'enregistré pour l'instant. Touchez le cœur sur une destination ou un forfait pour l'ajouter ici.",
+    "save": "Enregistrer",
+    "saved": "Enregistré",
+    "add": "Ajouter à la liste",
+    "remove": "Retirer de la liste"
+  },
+  "booking": {
+    "title": "Planifiez votre voyage",
+    "steps": {
+      "destination": "Destination",
+      "dates": "Dates",
+      "guests": "Voyageurs",
+      "budget": "Budget",
+      "package": "Forfait",
+      "review": "Récapitulatif"
+    },
+    "startDate": "Arrivée",
+    "endDate": "Départ",
+    "guestsLabel": "voyageurs",
+    "noPackages": "Pas de forfait prédéfini ici — nous en concevrons un pour vous.",
+    "noPreference": "Sans préférence — surprenez-moi",
+    "back": "Retour",
+    "next": "Continuer",
+    "confirm": "Confirmer la réservation",
+    "confirming": "Confirmation…",
+    "successTitle": "Votre voyage est réservé",
+    "successBody": "Un concepteur de voyage vous contactera sous un jour ouvré pour peaufiner chaque détail.",
+    "reference": "Référence",
+    "done": "Retour à l'accueil",
+    "error": "Nous n'avons pas pu finaliser. Vérifiez vos informations et réessayez."
+  },
+  "auth": {
+    "signInTitle": "Bon retour",
+    "signUpTitle": "Créez votre compte",
+    "email": "E-mail",
+    "password": "Mot de passe",
+    "signIn": "Se connecter",
+    "signUp": "S'inscrire",
+    "submitting": "Veuillez patienter…",
+    "noAccount": "Nouveau ici ?",
+    "haveAccount": "Vous avez déjà un compte ?",
+    "notConfigured": "Les comptes ne sont pas encore activés dans cet environnement.",
+    "checkEmail": "Vérifiez votre e-mail pour confirmer votre compte.",
+    "accountEyebrow": "Compte",
+    "accountTitle": "Votre compte",
+    "signedInAs": "Connecté en tant que",
+    "signOut": "Se déconnecter",
+    "bookingHistory": "Historique des réservations",
+    "noBookings": "Aucune réservation pour l'instant — commencez à planifier un voyage."
+  }
+}
