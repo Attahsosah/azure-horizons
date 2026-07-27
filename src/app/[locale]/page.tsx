@@ -14,6 +14,8 @@ import { FeaturedDestinations } from "@/features/destinations/featured-destinati
 import { PopularExperiences } from "@/features/experiences/popular-experiences";
 import { Faqs } from "@/features/faq/faqs";
 import { Gallery } from "@/features/gallery/gallery";
+import { ParallaxBand } from "@/components/layout/parallax-band";
+import { FlightSequence } from "@/features/flight-sequence/flight-sequence";
 import { Hero } from "@/features/hero-3d/hero";
 import { Newsletter } from "@/features/newsletter/newsletter";
 import { OurPartners } from "@/features/partners/our-partners";
@@ -39,6 +41,17 @@ export default async function Home({
 
   const dict = await getDictionary(locale);
   const hero = dict.hero as Record<string, string>;
+  const chapters = dict.chapters as Record<
+    string,
+    { eyebrow: string; title: string; subtitle: string }
+  >;
+  const flight = dict.flight as {
+    eyebrow: string;
+    title: string;
+    subtitle: string;
+  };
+  const bandImage = (id: string) =>
+    `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=2400&q=80`;
 
   const repo = getContentRepository();
   const [destinations, faqs] = await Promise.all([
@@ -87,16 +100,59 @@ export default async function Home({
       </Hero>
 
       <FeaturedDestinations locale={locale} />
+
+      <FlightSequence
+        eyebrow={flight.eyebrow}
+        title={flight.title}
+        subtitle={flight.subtitle}
+      />
+
       <DestinationExplorer locale={locale} destinations={destinations} />
       <VacationPackages locale={locale} />
+
+      <ParallaxBand
+        src={bandImage("1505228395891-9a51e7e86bf6")}
+        alt=""
+        eyebrow={chapters.four.eyebrow}
+        title={chapters.four.title}
+        subtitle={chapters.four.subtitle}
+      />
+
       <TravelCategories locale={locale} />
       <PopularExperiences locale={locale} />
+
+      <ParallaxBand
+        src={bandImage("1519046904884-53103b34b206")}
+        alt=""
+        eyebrow={chapters.two.eyebrow}
+        title={chapters.two.title}
+        subtitle={chapters.two.subtitle}
+      />
+
       <OurPartners locale={locale} />
       <WhyChooseUs locale={locale} />
       <Testimonials locale={locale} />
       <Gallery locale={locale} />
+
+      <ParallaxBand
+        src={bandImage("1439066615861-d1af74d74000")}
+        alt=""
+        eyebrow={chapters.three.eyebrow}
+        title={chapters.three.title}
+        subtitle={chapters.three.subtitle}
+      />
+
       <Faqs locale={locale} faqs={faqs} />
       <Contact locale={locale} />
+
+      <ParallaxBand
+        src={bandImage("1506929562872-bb421503ef21")}
+        alt=""
+        eyebrow={chapters.five.eyebrow}
+        title={chapters.five.title}
+        subtitle={chapters.five.subtitle}
+      />
+
       <Newsletter locale={locale} />
     </>
   );

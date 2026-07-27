@@ -29,6 +29,38 @@
     "cardLabel": "Structure localisée",
     "cardBody": "Des routes en anglais et en français, une navigation accessible et un défilement fluide respectant les préférences de mouvement — le tout depuis une seule configuration."
   },
+  "flight": {
+    "eyebrow": "Approche finale",
+    "title": "Les îles se dévoilent",
+    "subtitle": "Ce premier regard par le hublot — l'instant où le voyage cesse d'être un projet pour devenir réel."
+  },
+  "chapters": {
+    "one": {
+      "eyebrow": "L'invitation",
+      "title": "L'horizon vous appelle",
+      "subtitle": "Quelque part entre ici et le bout de la carte, votre prochain voyage vous attend déjà."
+    },
+    "two": {
+      "eyebrow": "S'immerger",
+      "title": "Là où l'eau rejoint le ciel",
+      "subtitle": "Des jours au rythme des marées, et des nuits qui s'étirent à l'infini."
+    },
+    "three": {
+      "eyebrow": "Appartenir",
+      "title": "Chaque voyage devient une histoire",
+      "subtitle": "De celles que l'on raconte pendant des années — arrangées dans le moindre détail."
+    },
+    "four": {
+      "eyebrow": "S'évader",
+      "title": "Quittez l'ordinaire",
+      "subtitle": "Les chemins de traverse, et les lieux que l'on ne veut plus quitter."
+    },
+    "five": {
+      "eyebrow": "À vous",
+      "title": "Commençons votre voyage",
+      "subtitle": "Dites-nous où vous emmène votre imagination — nous nous occupons du reste."
+    }
+  },
   "footer": {
     "tagline": "Des voyages cinématographiques, arrangés avec soin.",
     "explore": "Explorer",

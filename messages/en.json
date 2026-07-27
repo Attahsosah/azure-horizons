@@ -29,6 +29,38 @@
     "cardLabel": "Localized shell",
     "cardBody": "English and French routes, an accessible navigation system, and reduced-motion-aware smooth scrolling — all from one config."
   },
+  "flight": {
+    "eyebrow": "Final approach",
+    "title": "The islands rise to meet you",
+    "subtitle": "That first glimpse from the window — the moment a journey stops being a plan and becomes real."
+  },
+  "chapters": {
+    "one": {
+      "eyebrow": "The invitation",
+      "title": "The horizon is calling",
+      "subtitle": "Somewhere between here and the edge of the map, your next journey is already waiting."
+    },
+    "two": {
+      "eyebrow": "Immerse",
+      "title": "Where the water meets the sky",
+      "subtitle": "Days that slow to the rhythm of the tide, and nights that stretch on forever."
+    },
+    "three": {
+      "eyebrow": "Belong",
+      "title": "Every journey becomes a story",
+      "subtitle": "The kind you tell for years — arranged down to the last, quiet detail."
+    },
+    "four": {
+      "eyebrow": "Wander",
+      "title": "Slip beyond the ordinary",
+      "subtitle": "The roads less travelled, and the rooms you'll never want to leave."
+    },
+    "five": {
+      "eyebrow": "Your turn",
+      "title": "Let's begin your journey",
+      "subtitle": "Tell us where your imagination goes — we'll take care of everything after."
+    }
+  },
   "footer": {
     "tagline": "Cinematic journeys, thoughtfully arranged.",
     "explore": "Explore",

@@ -7,7 +7,8 @@ import "../globals.css";
 
 import { Footer } from "@/components/layout/footer";
 import { Header } from "@/components/layout/header";
-import { ScrollAmbience } from "@/components/layout/scroll-ambience";
+import { AuroraBackground } from "@/components/layout/aurora-background";
+import { FlightPath } from "@/components/layout/flight-path";
 import { SmoothScroll } from "@/components/layout/smooth-scroll";
 import { TransitionOverlay } from "@/features/transitions/transition-overlay";
 import { TransitionProvider } from "@/features/transitions/transition-provider";
@@ -107,7 +108,8 @@ export default async function LocaleLayout({
       className={`${inter.variable} ${fraunces.variable}`}
     >
       <body className="min-h-dvh bg-background text-foreground antialiased">
-        <ScrollAmbience />
+        <AuroraBackground />
+        <FlightPath />
         <I18nProvider locale={locale as Locale} dictionary={dict}>
           <TransitionProvider>
             <SmoothScroll />
