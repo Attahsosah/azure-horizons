@@ -40,9 +40,15 @@ export default async function Home({
   if (!isLocale(locale)) notFound();
 
   const dict = await getDictionary(locale);
-  const hero = dict.hero as Record<string, string>;
+  const hero = dict.hero as {
+    badge: string;
+    title: string;
+    subtitle: string;
+    ctaPrimary: string;
+    ctaSecondary: string;
+  };
   const chapters = dict.chapters as Record<
-    string,
+    "one" | "two" | "three" | "four" | "five",
     { eyebrow: string; title: string; subtitle: string }
   >;
   const flight = dict.flight as {
