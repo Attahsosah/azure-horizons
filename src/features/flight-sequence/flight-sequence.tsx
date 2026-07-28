@@ -1,25 +1,23 @@
 "use client";
 
 import { useRef } from "react";
-import {
-  motion,
-  useScroll,
-  useTransform,
-  type MotionValue,
-} from "framer-motion";
+import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 
 import { ImageWithFallback } from "@/components/layout/image-with-fallback";
 import { Reveal } from "@/components/motion";
 import { useReducedMotion } from "@/hooks/use-reduced-motion";
 
-// Banking-descent frames (generated from the hero, style-matched). Referenced by
-// URL from the connector CDN; can be moved into /public for production.
-const CDN =
-  "https://d8j0ntlcm91z4.cloudfront.net/user_3FtpS2BXtpWM9PBWamolQGsBF7O";
-const FRAME_1 = `${CDN}/hf_20260727_185849_c17f0e0e-dd2c-4d27-b9ab-4af874205010.png`;
-const FRAME_2 = `${CDN}/hf_20260727_185851_61cf6864-95d8-4fb3-899f-2e002ca682b6.png`;
-const FRAME_3 = `${CDN}/hf_20260727_185853_3a191649-e8d1-4348-a4ab-7222a0897cb1.png`;
-const FRAME_4 = `${CDN}/hf_20260727_185855_b45be026-30e4-4aa9-ae7b-b5ddc2f4c7f7.png`;
+// The single hero image for the cinematic push (banking approach over islands).
+const DESCENT_IMAGE =
+  "https://d8j0ntlcm91z4.cloudfront.net/user_3FtpS2BXtpWM9PBWamolQGsBF7O/hf_20260727_185855_b45be026-30e4-4aa9-ae7b-b5ddc2f4c7f7.png";
+
+// Foreground light motes — parallax faster than the image for a sense of depth.
+const MOTES = [
+  { top: "20%", left: "16%", size: 130, opacity: 0.2, dur: 9 },
+  { top: "64%", left: "22%", size: 90, opacity: 0.16, dur: 11 },
+  { top: "34%", left: "78%", size: 170, opacity: 0.18, dur: 13 },
+  { top: "72%", left: "70%", size: 110, opacity: 0.2, dur: 10 },
+];
 
 interface FlightSequenceProps {
   eyebrow: string;
@@ -28,10 +26,11 @@ interface FlightSequenceProps {
 }
 
 /**
- * Scroll-scrubbed cinematic descent. A tall track pins a full-viewport stage and
- * crossfades through the banking-approach frames as the user scrolls; the
- * descent completes by ~60% and the final frame + headline hold for the rest.
- * Under reduced motion it collapses to a single static band.
+ * One-shot cinematic push. A single image is held in a pinned full-viewport
+ * stage and slowly zoomed + drifted as the user scrolls, with foreground motes
+ * parallaxing for depth and the headline settling in. Every scroll-driven value
+ * is spring-smoothed so the motion glides rather than tracking scroll steps.
+ * Collapses to a static band under reduced motion.
  */
 export function FlightSequence({ eyebrow, title, subtitle }: FlightSequenceProps) {
   const reduce = useReducedMotion();
@@ -40,27 +39,23 @@ export function FlightSequence({ eyebrow, title, subtitle }: FlightSequenceProps
     target: ref,
     offset: ["start start", "end end"],
   });
+  // Spring-smoothed progress is the source for every motion below.
+  const p = useSpring(scrollYProgress, {
+    stiffness: 90,
+    damping: 30,
+    mass: 0.5,
+  });
 
-  const o0 = useTransform(scrollYProgress, [0.0, 0.18], [1, 0]);
-  const o1 = useTransform(scrollYProgress, [0.08, 0.2, 0.34], [0, 1, 0]);
-  const o2 = useTransform(scrollYProgress, [0.28, 0.4, 0.54], [0, 1, 0]);
-  const o3 = useTransform(scrollYProgress, [0.48, 0.6], [0, 1]);
-
-  const scale = useTransform(scrollYProgress, [0, 0.6], [1.14, 1.02]);
-  const textOpacity = useTransform(scrollYProgress, [0.52, 0.64], [0, 1]);
-  const textY = useTransform(scrollYProgress, [0.52, 0.64], [28, 0]);
-
-  const layers: { src: string; opacity: MotionValue<number> }[] = [
-    { src: FRAME_1, opacity: o0 },
-    { src: FRAME_2, opacity: o1 },
-    { src: FRAME_3, opacity: o2 },
-    { src: FRAME_4, opacity: o3 },
-  ];
+  const scale = useTransform(p, [0, 1], [1.05, 1.32]);
+  const imageY = useTransform(p, [0, 1], ["0%", "-5%"]);
+  const moteY = useTransform(p, [0, 1], ["8%", "-22%"]);
+  const textOpacity = useTransform(p, [0.42, 0.68], [0, 1]);
+  const textY = useTransform(p, [0.42, 0.68], [40, 0]);
 
   if (reduce) {
     return (
       <section className="relative h-[80vh] min-h-[460px] w-full overflow-hidden bg-navy">
-        <ImageWithFallback src={FRAME_4} alt="" sizes="100vw" priority />
+        <ImageWithFallback src={DESCENT_IMAGE} alt="" sizes="100vw" priority />
         <div className="absolute inset-0 bg-gradient-to-t from-navy/85 via-navy/35 to-navy/45" />
         <div className="relative z-10 mx-auto flex h-full max-w-4xl flex-col items-center justify-end px-6 pb-[14vh] text-center">
           <span className="mb-4 text-fluid-sm font-medium uppercase tracking-[0.24em] text-turquoise">
@@ -78,26 +73,48 @@ export function FlightSequence({ eyebrow, title, subtitle }: FlightSequenceProps
   }
 
   return (
-    <section ref={ref} className="relative h-[300vh] w-full">
+    <section ref={ref} className="relative h-[240vh] w-full">
       <div className="sticky top-0 h-screen w-full overflow-hidden bg-navy">
-        {layers.map((layer, i) => (
-          <motion.div
-            key={i}
-            className="absolute inset-0"
-            style={{ opacity: layer.opacity, scale }}
-          >
-            <ImageWithFallback
-              src={layer.src}
-              alt=""
-              sizes="100vw"
-              priority={i === 0}
+        {/* Image — deep, slow zoom + drift. */}
+        <motion.div
+          className="absolute inset-[-8%]"
+          style={{ scale, y: imageY }}
+        >
+          <ImageWithFallback src={DESCENT_IMAGE} alt="" sizes="100vw" priority />
+        </motion.div>
+
+        {/* Foreground motes — faster parallax for depth. */}
+        <motion.div
+          aria-hidden="true"
+          className="absolute inset-0"
+          style={{ y: moteY }}
+        >
+          {MOTES.map((m, i) => (
+            <motion.span
+              key={i}
+              className="absolute rounded-full"
+              style={{
+                top: m.top,
+                left: m.left,
+                width: m.size,
+                height: m.size,
+                background: `radial-gradient(circle, rgba(255,255,255,${m.opacity}) 0%, rgba(255,255,255,0) 70%)`,
+                filter: "blur(4px)",
+              }}
+              animate={{ y: [0, -14, 0], opacity: [0.6, 1, 0.6] }}
+              transition={{
+                duration: m.dur,
+                repeat: Infinity,
+                ease: "easeInOut",
+                delay: i * 0.7,
+              }}
             />
-          </motion.div>
-        ))}
+          ))}
+        </motion.div>
 
         <div
           aria-hidden="true"
-          className="absolute inset-0 bg-gradient-to-t from-navy/80 via-navy/15 to-navy/40"
+          className="absolute inset-0 bg-gradient-to-t from-navy/80 via-navy/15 to-navy/45"
         />
 
         <motion.div

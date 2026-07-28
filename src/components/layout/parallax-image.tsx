@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 
 import { ImageWithFallback } from "@/components/layout/image-with-fallback";
 import { useReducedMotion } from "@/hooks/use-reduced-motion";
@@ -35,7 +35,12 @@ export function ParallaxImage({
     target: ref,
     offset: ["start end", "end start"],
   });
-  const y = useTransform(scrollYProgress, [0, 1], [strength, -strength]);
+  const smooth = useSpring(scrollYProgress, {
+    stiffness: 80,
+    damping: 30,
+    mass: 0.4,
+  });
+  const y = useTransform(smooth, [0, 1], [strength, -strength]);
 
   return (
     <div ref={ref} className={cn("relative overflow-hidden", className)}>
