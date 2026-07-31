@@ -28,6 +28,8 @@ export const bookingSchema = z
     endDate: z.string().min(1),
     guests: z.number().int().min(1).max(12),
     budgetTier: z.enum(budgetTiers),
+    customerName: z.string().min(2),
+    customerEmail: z.email(),
   })
   .refine((v) => v.endDate > v.startDate, {
     message: "End date must be after start date",

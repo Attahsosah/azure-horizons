@@ -115,6 +115,8 @@ export function BookingWizard({
         endDate: draft.endDate,
         guests: draft.guests,
         budgetTier: draft.budgetTier,
+        customerName: draft.customerName,
+        customerEmail: draft.customerEmail,
       });
       if (res.ok && res.reference) {
         setReference(res.reference);
@@ -352,23 +354,50 @@ export function BookingWizard({
         )}
 
         {stepKey === "review" && (
-          <dl className="divide-y divide-border rounded-xl border border-border bg-card">
-            <Row label={t("booking.steps.destination")}>
-              {selectedDestination?.name ?? "—"}
-            </Row>
-            <Row label={t("booking.steps.dates")}>
-              {draft.startDate} → {draft.endDate}
-            </Row>
-            <Row label={t("booking.steps.guests")}>{draft.guests}</Row>
-            <Row label={t("booking.steps.budget")}>
-              {draft.budgetTier ? t(`tiers.${draft.budgetTier}`) : "—"}
-            </Row>
-            <Row label={t("booking.steps.package")}>
-              {selectedPackage
-                ? pick(selectedPackage.title, locale)
-                : t("booking.noPreference")}
-            </Row>
-          </dl>
+          <div className="grid gap-6">
+            <div className="grid gap-4 sm:grid-cols-2">
+              <label className="block">
+                <span className="mb-1 block text-sm font-medium">
+                  {t("booking.name")}
+                </span>
+                <input
+                  type="text"
+                  value={draft.customerName}
+                  onChange={(e) => draft.set({ customerName: e.target.value })}
+                  className="w-full rounded-xl border border-border bg-card px-4 py-3"
+                />
+              </label>
+              <label className="block">
+                <span className="mb-1 block text-sm font-medium">
+                  {t("booking.email")}
+                </span>
+                <input
+                  type="email"
+                  value={draft.customerEmail}
+                  onChange={(e) => draft.set({ customerEmail: e.target.value })}
+                  className="w-full rounded-xl border border-border bg-card px-4 py-3"
+                />
+              </label>
+            </div>
+
+            <dl className="divide-y divide-border rounded-xl border border-border bg-card">
+              <Row label={t("booking.steps.destination")}>
+                {selectedDestination?.name ?? "—"}
+              </Row>
+              <Row label={t("booking.steps.dates")}>
+                {draft.startDate} → {draft.endDate}
+              </Row>
+              <Row label={t("booking.steps.guests")}>{draft.guests}</Row>
+              <Row label={t("booking.steps.budget")}>
+                {draft.budgetTier ? t(`tiers.${draft.budgetTier}`) : "—"}
+              </Row>
+              <Row label={t("booking.steps.package")}>
+                {selectedPackage
+                  ? pick(selectedPackage.title, locale)
+                  : t("booking.noPreference")}
+              </Row>
+            </dl>
+          </div>
         )}
       </div>
 
@@ -390,7 +419,11 @@ export function BookingWizard({
           <button
             type="button"
             onClick={submit}
-            disabled={pending}
+            disabled={
+              pending ||
+              draft.customerName.trim().length < 2 ||
+              !/.+@.+\..+/.test(draft.customerEmail)
+            }
             className="rounded-full bg-primary px-6 py-2.5 text-sm font-semibold text-primary-foreground disabled:opacity-60"
           >
             {pending ? t("booking.confirming") : t("booking.confirm")}

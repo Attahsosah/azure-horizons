@@ -10,6 +10,8 @@ interface BookingDraftState {
   endDate: string | null;
   guests: number;
   budgetTier: BudgetTier | null;
+  customerName: string;
+  customerEmail: string;
   set: (patch: Partial<BookingDraftData>) => void;
   reset: () => void;
 }
@@ -23,6 +25,8 @@ const initial: BookingDraftData = {
   endDate: null,
   guests: 2,
   budgetTier: null,
+  customerName: "",
+  customerEmail: "",
 };
 
 /**
@@ -47,6 +51,8 @@ export const useBookingDraft = create<BookingDraftState>()(
         endDate: s.endDate,
         guests: s.guests,
         budgetTier: s.budgetTier,
+        customerName: s.customerName,
+        customerEmail: s.customerEmail,
       }),
     },
   ),

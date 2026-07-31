@@ -230,6 +230,8 @@
     "startDate": "Arrivée",
     "endDate": "Départ",
     "guestsLabel": "voyageurs",
+    "name": "Nom complet",
+    "email": "E-mail",
     "noPackages": "Pas de forfait prédéfini ici — nous en concevrons un pour vous.",
     "noPreference": "Sans préférence — surprenez-moi",
     "back": "Retour",

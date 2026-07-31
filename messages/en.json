@@ -230,6 +230,8 @@
     "startDate": "Arrival",
     "endDate": "Departure",
     "guestsLabel": "travellers",
+    "name": "Full name",
+    "email": "Email",
     "noPackages": "No set packages here — we'll tailor one for you.",
     "noPreference": "No preference — surprise me",
     "back": "Back",
