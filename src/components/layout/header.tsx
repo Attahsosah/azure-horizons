@@ -35,13 +35,16 @@ export function Header({ authed }: { authed: boolean }) {
       <div
         className={`glass mx-auto flex max-w-7xl items-center justify-between gap-4 rounded-full px-4 py-2.5 transition-shadow duration-300 sm:px-6 ${scrolled ? "shadow-elevated" : ""}`}
       >
-        <TransitionLink
-          href={home}
-          className="flex items-center gap-2 font-display text-lg font-semibold tracking-tight text-foreground"
-        >
-          <Compass className="size-5 text-primary" aria-hidden="true" />
-          <span>Azure Horizons</span>
-        </TransitionLink>
+        <div className="flex items-center gap-3">
+          <TransitionLink
+            href={home}
+            className="flex items-center gap-2 font-display text-lg font-semibold tracking-tight text-foreground"
+          >
+            <Compass className="size-5 text-primary" aria-hidden="true" />
+            <span>Azure Horizons</span>
+          </TransitionLink>
+          <LanguageSwitcher className="md:hidden" />
+        </div>
 
         <nav
           aria-label={t("nav.primaryLabel")}

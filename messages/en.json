@@ -261,6 +261,16 @@
     "signedInAs": "Signed in as",
     "signOut": "Sign out",
     "bookingHistory": "Booking history",
-    "noBookings": "No bookings yet — start planning a journey."
+    "noBookings": "No bookings yet — start planning a journey.",
+    "forgotPassword": "Forgot your password?",
+    "resetTitle": "Reset your password",
+    "resetIntro": "Enter your email and we'll send you a reset link.",
+    "sendReset": "Send reset link",
+    "resetSent": "If an account exists for that email, a reset link is on its way.",
+    "newPasswordTitle": "Choose a new password",
+    "newPassword": "New password",
+    "updatePassword": "Update password",
+    "weakPassword": "Password must be at least 6 characters.",
+    "resetExpired": "This reset link is invalid or has expired. Request a new one."
   }
 }

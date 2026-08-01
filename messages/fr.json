@@ -261,6 +261,16 @@
     "signedInAs": "Connecté en tant que",
     "signOut": "Se déconnecter",
     "bookingHistory": "Historique des réservations",
-    "noBookings": "Aucune réservation pour l'instant — commencez à planifier un voyage."
+    "noBookings": "Aucune réservation pour l'instant — commencez à planifier un voyage.",
+    "forgotPassword": "Mot de passe oublié ?",
+    "resetTitle": "Réinitialiser votre mot de passe",
+    "resetIntro": "Saisissez votre e-mail et nous vous enverrons un lien de réinitialisation.",
+    "sendReset": "Envoyer le lien",
+    "resetSent": "Si un compte existe pour cet e-mail, un lien de réinitialisation est en route.",
+    "newPasswordTitle": "Choisissez un nouveau mot de passe",
+    "newPassword": "Nouveau mot de passe",
+    "updatePassword": "Mettre à jour le mot de passe",
+    "weakPassword": "Le mot de passe doit contenir au moins 6 caractères.",
+    "resetExpired": "Ce lien de réinitialisation est invalide ou a expiré. Demandez-en un nouveau."
   }
 }

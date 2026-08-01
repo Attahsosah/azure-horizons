@@ -47,6 +47,17 @@ export default async function SignInPage({
         </p>
       )}
 
+      {isSupabaseConfigured() && (
+        <p className="mt-4 text-sm">
+          <TransitionLink
+            href={`/${locale}/forgot-password`}
+            className="text-muted-foreground hover:text-foreground"
+          >
+            {resolveText(dict, "auth.forgotPassword")}
+          </TransitionLink>
+        </p>
+      )}
+
       <p className="mt-6 text-sm text-muted-foreground">
         {resolveText(dict, "auth.noAccount")}{" "}
         <TransitionLink

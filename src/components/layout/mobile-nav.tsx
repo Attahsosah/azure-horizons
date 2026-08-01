@@ -1,6 +1,7 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import { createPortal } from "react-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import { Compass, X } from "lucide-react";
 
@@ -17,14 +18,18 @@ interface MobileNavProps {
 }
 
 /**
- * Full-screen mobile navigation overlay. Locks body scroll while open, closes
- * on Escape, and staggers its links in. All motion collapses to instant under
- * reduced-motion.
+ * Full-screen mobile navigation overlay. Rendered through a portal on
+ * `document.body` so it escapes the header's stacking context and reliably sits
+ * above the page, background, and flight-path layers (and receives taps). Locks
+ * body scroll while open, closes on Escape, and staggers its links in.
  */
 export function MobileNav({ open, onClose, authed }: MobileNavProps) {
   const { locale, t } = useI18n();
   const reduce = useReducedMotion();
   const home = `/${locale}`;
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => setMounted(true), []);
 
   useEffect(() => {
     if (!open) return;
@@ -39,14 +44,16 @@ export function MobileNav({ open, onClose, authed }: MobileNavProps) {
     };
   }, [open, onClose]);
 
-  return (
+  if (!mounted) return null;
+
+  return createPortal(
     <AnimatePresence>
       {open && (
         <motion.div
           role="dialog"
           aria-modal="true"
           aria-label={t("nav.primaryLabel")}
-          className="fixed inset-0 z-50 flex flex-col bg-background/95 backdrop-blur-xl md:hidden"
+          className="fixed inset-0 z-[90] flex flex-col bg-background md:hidden"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
@@ -112,6 +119,7 @@ export function MobileNav({ open, onClose, authed }: MobileNavProps) {
           </div>
         </motion.div>
       )}
-    </AnimatePresence>
+    </AnimatePresence>,
+    document.body,
   );
 }
