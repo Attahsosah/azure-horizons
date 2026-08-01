@@ -89,6 +89,16 @@
     "skipToContent": "Aller au contenu"
   },
   "sections": {
+    "about": {
+      "eyebrow": "Qui nous sommes",
+      "title": "Un studio d'exception pour des voyages extraordinaires",
+      "body": "Azure Horizons est un studio de voyage de luxe. Nous concevons des voyages cinématographiques et profondément personnels vers les lieux les plus remarquables du monde — chaque détail orchestré par un concepteur de voyage dédié, pour qu'il ne vous reste plus qu'à arriver.",
+      "stats": {
+        "years": { "value": "12+", "label": "Années à créer des voyages" },
+        "destinations": { "value": "60+", "label": "Destinations dans le monde" },
+        "journeys": { "value": "2 000+", "label": "Voyages conçus" }
+      }
+    },
     "featured": {
       "eyebrow": "À la une",
       "title": "Destinations signature",
@@ -102,8 +112,8 @@
       "empty": "Aucune destination ne correspond à ce filtre pour l'instant."
     },
     "packages": {
-      "eyebrow": "Forfaits sélectionnés",
-      "title": "Voyages clés en main",
+      "eyebrow": "Sélection",
+      "title": "Forfaits de voyage populaires",
       "description": "Des points de départ, chacun façonné pour vous une fois réservé.",
       "cta": "Voir le forfait"
     },

@@ -30,7 +30,7 @@ export const destinations: Destination[] = [
     image: img("1570077188670-e3a8d69ac5ff"),
     tags: ["island", "romance", "sunset"],
     priceFrom: 3200,
-    currency: "EUR",
+    currency: "USD",
     featured: true,
   },
   {
@@ -46,7 +46,7 @@ export const destinations: Destination[] = [
     image: img("1514282401047-d79a71a590e8"),
     tags: ["island", "diving", "overwater"],
     priceFrom: 5400,
-    currency: "EUR",
+    currency: "USD",
     featured: true,
   },
   {
@@ -62,7 +62,7 @@ export const destinations: Destination[] = [
     image: img("1493976040374-85c8e12f0c0e"),
     tags: ["culture", "city", "gardens"],
     priceFrom: 4100,
-    currency: "EUR",
+    currency: "USD",
     featured: true,
   },
   {
@@ -78,7 +78,7 @@ export const destinations: Destination[] = [
     image: img("1533104816931-20fa691ff6ca"),
     tags: ["coast", "romance", "cuisine"],
     priceFrom: 3800,
-    currency: "EUR",
+    currency: "USD",
     featured: true,
   },
   {
@@ -94,7 +94,7 @@ export const destinations: Destination[] = [
     image: img("1537996194471-e657df975ab4"),
     tags: ["island", "wellness", "jungle"],
     priceFrom: 2900,
-    currency: "EUR",
+    currency: "USD",
     featured: false,
   },
   {
@@ -110,7 +110,7 @@ export const destinations: Destination[] = [
     image: img("1531366936337-7c912a4589a7"),
     tags: ["mountains", "ski", "wellness"],
     priceFrom: 4600,
-    currency: "EUR",
+    currency: "USD",
     featured: false,
   },
 ];
@@ -127,7 +127,7 @@ export const packages: Package[] = [
     tier: "premium",
     nights: 5,
     priceFrom: 3200,
-    currency: "EUR",
+    currency: "USD",
     inclusions: {
       en: ["Cave-suite with private plunge pool", "Private catamaran sunset sail", "Sommelier-led Assyrtiko tasting"],
       fr: ["Suite troglodyte avec bassin privé", "Croisière privée en catamaran au coucher du soleil", "Dégustation d'Assyrtiko avec sommelier"],
@@ -145,7 +145,7 @@ export const packages: Package[] = [
     tier: "ultra",
     nights: 7,
     priceFrom: 5400,
-    currency: "EUR",
+    currency: "USD",
     inclusions: {
       en: ["Two-storey overwater villa", "Seaplane transfers", "Private reef dive with marine biologist"],
       fr: ["Villa sur pilotis à deux étages", "Transferts en hydravion", "Plongée sur récif privé avec un biologiste marin"],
@@ -163,7 +163,7 @@ export const packages: Package[] = [
     tier: "premium",
     nights: 6,
     priceFrom: 4100,
-    currency: "EUR",
+    currency: "USD",
     inclusions: {
       en: ["Restored townhouse with garden", "Private tea ceremony", "Dawn temple visit before the crowds"],
       fr: ["Maison de ville restaurée avec jardin", "Cérémonie du thé privée", "Visite d'un temple à l'aube avant la foule"],
@@ -181,7 +181,7 @@ export const packages: Package[] = [
     tier: "comfort",
     nights: 5,
     priceFrom: 3800,
-    currency: "EUR",
+    currency: "USD",
     inclusions: {
       en: ["Sea-view suite in Positano", "Private gozzo boat day", "Chef's table in the lemon grove"],
       fr: ["Suite vue mer à Positano", "Journée en bateau gozzo privé", "Table du chef dans la citronneraie"],
@@ -199,7 +199,7 @@ export const packages: Package[] = [
     tier: "premium",
     nights: 4,
     priceFrom: 4600,
-    currency: "EUR",
+    currency: "USD",
     inclusions: {
       en: ["Slope-side grand hotel", "Private ski guide", "Alpine spa and glacier lunch"],
       fr: ["Grand hôtel au pied des pistes", "Guide de ski privé", "Spa alpin et déjeuner sur le glacier"],

@@ -7,14 +7,12 @@ import {
   Reveal,
   RippleButton,
 } from "@/components/motion";
-import { TravelCategories } from "@/features/categories/travel-categories";
+import { ParallaxBand } from "@/components/layout/parallax-band";
+import { AboutUs } from "@/features/about/about-us";
 import { Contact } from "@/features/contact/contact";
 import { DestinationExplorer } from "@/features/destinations/destination-explorer";
 import { FeaturedDestinations } from "@/features/destinations/featured-destinations";
-import { PopularExperiences } from "@/features/experiences/popular-experiences";
 import { Faqs } from "@/features/faq/faqs";
-import { Gallery } from "@/features/gallery/gallery";
-import { ParallaxBand } from "@/components/layout/parallax-band";
 import { FlightSequence } from "@/features/flight-sequence/flight-sequence";
 import { Hero } from "@/features/hero-3d/hero";
 import { Newsletter } from "@/features/newsletter/newsletter";
@@ -28,9 +26,7 @@ import { isLocale } from "@/lib/i18n/config";
 import { getDictionary } from "@/lib/i18n/dictionaries";
 import { JsonLd, faqLd, travelAgencyLd } from "@/lib/seo/json-ld";
 
-/**
- * Localized landing. Hero (Phase 4) + marketing sections (Phase 6 Chunk A).
- */
+/** Localized landing page. */
 export default async function Home({
   params,
 }: {
@@ -105,6 +101,8 @@ export default async function Home({
         </Reveal>
       </Hero>
 
+      <AboutUs locale={locale} />
+
       <FeaturedDestinations locale={locale} />
 
       <FlightSequence
@@ -117,17 +115,6 @@ export default async function Home({
       <VacationPackages locale={locale} />
 
       <ParallaxBand
-        src={bandImage("1505228395891-9a51e7e86bf6")}
-        alt=""
-        eyebrow={chapters.four.eyebrow}
-        title={chapters.four.title}
-        subtitle={chapters.four.subtitle}
-      />
-
-      <TravelCategories locale={locale} />
-      <PopularExperiences locale={locale} />
-
-      <ParallaxBand
         src={bandImage("1519046904884-53103b34b206")}
         alt=""
         eyebrow={chapters.two.eyebrow}
@@ -135,10 +122,9 @@ export default async function Home({
         subtitle={chapters.two.subtitle}
       />
 
-      <OurPartners locale={locale} />
       <WhyChooseUs locale={locale} />
       <Testimonials locale={locale} />
-      <Gallery locale={locale} />
+      <OurPartners locale={locale} />
 
       <ParallaxBand
         src={bandImage("1439066615861-d1af74d74000")}
@@ -150,15 +136,6 @@ export default async function Home({
 
       <Faqs locale={locale} faqs={faqs} />
       <Contact locale={locale} />
-
-      <ParallaxBand
-        src={bandImage("1506929562872-bb421503ef21")}
-        alt=""
-        eyebrow={chapters.five.eyebrow}
-        title={chapters.five.title}
-        subtitle={chapters.five.subtitle}
-      />
-
       <Newsletter locale={locale} />
     </>
   );

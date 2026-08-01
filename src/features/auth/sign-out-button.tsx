@@ -1,6 +1,12 @@
-import { signOut } from "@/lib/actions/auth";
+"use client";
 
-/** Sign-out form button (server action, no client JS needed). */
+import { signOut } from "@/lib/actions/auth";
+import { useWishlist } from "@/stores/wishlist-store";
+
+/**
+ * Sign-out form button. Clears the local (browser-scoped) wishlist on submit so
+ * a signed-in user's saves don't linger for the next person on the same device.
+ */
 export function SignOutButton({
   locale,
   label,
@@ -9,7 +15,7 @@ export function SignOutButton({
   label: string;
 }) {
   return (
-    <form action={signOut}>
+    <form action={signOut} onSubmit={() => useWishlist.getState().clear()}>
       <input type="hidden" name="locale" value={locale} />
       <button
         type="submit"

@@ -89,6 +89,16 @@
     "skipToContent": "Skip to content"
   },
   "sections": {
+    "about": {
+      "eyebrow": "Who we are",
+      "title": "A boutique studio for extraordinary journeys",
+      "body": "Azure Horizons is a luxury travel studio. We design cinematic, deeply personal journeys to the world's most remarkable places — every detail arranged by a dedicated travel designer, so all you do is arrive.",
+      "stats": {
+        "years": { "value": "12+", "label": "Years crafting journeys" },
+        "destinations": { "value": "60+", "label": "Destinations worldwide" },
+        "journeys": { "value": "2,000+", "label": "Journeys designed" }
+      }
+    },
     "featured": {
       "eyebrow": "Featured",
       "title": "Signature destinations",
@@ -102,8 +112,8 @@
       "empty": "No destinations match that filter yet."
     },
     "packages": {
-      "eyebrow": "Curated packages",
-      "title": "Ready-made journeys",
+      "eyebrow": "Curated",
+      "title": "Popular travel packages",
       "description": "Starting points, each shaped around you once you book.",
       "cta": "View package"
     },
