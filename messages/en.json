@@ -99,6 +99,20 @@
         "journeys": { "value": "2,000+", "label": "Journeys designed" }
       }
     },
+    "enquiry": {
+      "eyebrow": "Start here",
+      "title": "Design your journey",
+      "subtitle": "Tell us the essentials — a travel designer replies within a day. No payment to enquire.",
+      "destination": "Destination",
+      "anyDestination": "Not sure yet — surprise me",
+      "travellers": "Travellers",
+      "submit": "Send enquiry",
+      "sending": "Sending…",
+      "successTitle": "Your enquiry is on its way",
+      "successBody": "A travel designer will be in touch within one business day.",
+      "again": "Send another enquiry",
+      "error": "Something went wrong. Please try again."
+    },
     "featured": {
       "eyebrow": "Featured",
       "title": "Signature destinations",

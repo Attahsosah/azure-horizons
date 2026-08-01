@@ -10,6 +10,7 @@ import {
 import { ParallaxBand } from "@/components/layout/parallax-band";
 import { AboutUs } from "@/features/about/about-us";
 import { Contact } from "@/features/contact/contact";
+import { QuickEnquiry } from "@/features/enquiry/quick-enquiry";
 import { DestinationExplorer } from "@/features/destinations/destination-explorer";
 import { FeaturedDestinations } from "@/features/destinations/featured-destinations";
 import { Faqs } from "@/features/faq/faqs";
@@ -100,6 +101,8 @@ export default async function Home({
           </div>
         </Reveal>
       </Hero>
+
+      <QuickEnquiry locale={locale} destinations={destinations} />
 
       <AboutUs locale={locale} />
 

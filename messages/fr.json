@@ -99,6 +99,20 @@
         "journeys": { "value": "2 000+", "label": "Voyages conçus" }
       }
     },
+    "enquiry": {
+      "eyebrow": "Commencez ici",
+      "title": "Concevez votre voyage",
+      "subtitle": "Donnez-nous l'essentiel — un concepteur de voyage vous répond sous un jour. Aucun paiement pour demander.",
+      "destination": "Destination",
+      "anyDestination": "Pas encore sûr — surprenez-moi",
+      "travellers": "Voyageurs",
+      "submit": "Envoyer la demande",
+      "sending": "Envoi…",
+      "successTitle": "Votre demande est en route",
+      "successBody": "Un concepteur de voyage vous contactera sous un jour ouvré.",
+      "again": "Envoyer une autre demande",
+      "error": "Une erreur s'est produite. Veuillez réessayer."
+    },
     "featured": {
       "eyebrow": "À la une",
       "title": "Destinations signature",
