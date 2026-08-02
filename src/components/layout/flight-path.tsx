@@ -25,7 +25,7 @@ export function FlightPath() {
   return (
     <div
       aria-hidden="true"
-      className="pointer-events-none fixed right-5 top-0 z-30 hidden h-screen w-10 lg:block"
+      className="pointer-events-none fixed right-5 top-0 bottom-28 z-30 hidden w-10 lg:block"
     >
       <svg
         viewBox="0 0 40 100"

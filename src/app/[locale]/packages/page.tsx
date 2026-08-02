@@ -1,8 +1,10 @@
 import { notFound } from "next/navigation";
 
 import { Section, SectionHeading } from "@/components/layout/section";
-import { Reveal } from "@/components/motion";
-import { PackageCard } from "@/features/packages/package-card";
+import {
+  PackagesBrowser,
+  type BrowseItem,
+} from "@/features/packages/packages-browser";
 import { getContentRepository } from "@/lib/data/repository";
 import { pick } from "@/lib/data/types";
 import { isLocale } from "@/lib/i18n/config";
@@ -26,6 +28,26 @@ export default async function PackagesPage({
   const nightsLabel = resolveText(dict, "sections.labels.nights");
   const ctaLabel = resolveText(dict, "sections.packages.cta");
 
+  const items: BrowseItem[] = packages.map((p) => ({
+    id: p.id,
+    tier: p.tier,
+    nights: p.nights,
+    card: {
+      href: `/${locale}/packages/${p.slug}`,
+      title: pick(p.title, locale),
+      tierLabel: resolveText(dict, `tiers.${p.tier}`),
+      nights: p.nights,
+      nightsLabel,
+      priceFrom: p.priceFrom,
+      currency: p.currency,
+      fromLabel,
+      ctaLabel,
+      image: p.image,
+      inclusions: pick(p.inclusions, locale),
+      locale,
+    },
+  }));
+
   return (
     <Section className="pt-32">
       <SectionHeading
@@ -34,26 +56,7 @@ export default async function PackagesPage({
         title={resolveText(dict, "detail.packagesTitle")}
         description={resolveText(dict, "detail.packagesDescription")}
       />
-      <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {packages.map((p, i) => (
-          <Reveal key={p.id} delay={0.05 * i}>
-            <PackageCard
-              href={`/${locale}/packages/${p.slug}`}
-              title={pick(p.title, locale)}
-              tierLabel={resolveText(dict, `tiers.${p.tier}`)}
-              nights={p.nights}
-              nightsLabel={nightsLabel}
-              priceFrom={p.priceFrom}
-              currency={p.currency}
-              fromLabel={fromLabel}
-              ctaLabel={ctaLabel}
-              image={p.image}
-              inclusions={pick(p.inclusions, locale)}
-              locale={locale}
-            />
-          </Reveal>
-        ))}
-      </div>
+      <PackagesBrowser items={items} />
     </Section>
   );
 }

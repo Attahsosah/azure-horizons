@@ -6,7 +6,6 @@ import { Check, MoveRight, Plane } from "lucide-react";
 
 import { createBooking } from "@/lib/actions/forms";
 import type { Destination } from "@/lib/data/types";
-import type { Locale } from "@/lib/i18n/config";
 import { useI18n } from "@/lib/i18n/provider";
 import { useReducedMotion } from "@/hooks/use-reduced-motion";
 import { cn } from "@/lib/utils/cn";
@@ -24,10 +23,8 @@ const GUESTS = Array.from({ length: 12 }, (_, i) => i + 1);
  * plane-takeoff confirmation unique to this feature.
  */
 export function QuickEnquiry({
-  locale,
   destinations,
 }: {
-  locale: Locale;
   destinations: Destination[];
 }) {
   const { t } = useI18n();

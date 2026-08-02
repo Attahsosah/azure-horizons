@@ -6,6 +6,40 @@ understand the project's current state at a glance.
 **Status:** 🎉 **ALL 11 PHASES COMPLETE.** Build green (Next 15.5.21, 44 static routes), unit + E2E + axe tests green.
 **Phase 11 — Docs:** COMPLETE — `README.md` (overview, stack, architecture, setup, scripts, testing, Supabase, deploy), `CREDITS.md`, and this living doc.
 
+### Post-launch — UX & Feature Overhaul (living)
+
+**Design & motion overhaul**
+- Photographic depth-parallax hero (pointer + scroll layers) replacing the procedural WebGL scene; bespoke AI-generated window-seat hero image (Higgsfield connector, referenced from CDN — move to `public/` for production permanence).
+- Fixed aurora WebGL background (scroll-driven dawn→dusk palette) + CSS fallback; global flight-path scroll-progress rail; spring-smoothed parallax across chapters + gallery.
+- Full-bleed parallax "chapter" bands and a scroll-scrubbed cinematic descent (`FlightSequence`, single-image push) between sections. Plane theme throughout; reduced-motion honored.
+
+**Content & UX**
+- About section near the top; homepage trimmed (removed categories/experiences/gallery; Partners kept; Packages retitled "Popular travel packages"); currency switched to USD.
+- Mobile nav rebuilt via `createPortal` (fixes stacking/tap bug) + always-visible EN|FR toggle beside the title.
+- Wishlist cleared on sign-out (was leaking across users on shared browsers).
+
+**Auth**
+- Password reset flow: `/forgot-password` + `/reset-password` pages, `requestPasswordReset` / `updatePassword` actions, wired to `/auth/callback`. (Requires Supabase Site URL set to the live domain.)
+
+**Agency features (functional)**
+- Persistence wired: bookings (guests included), `contact_messages`, `newsletter_subs`. Booking wizard captures customer name + email. Migration `0002_bookings_customer.sql` (customer fields + nullable `user_id`).
+- Email notifications via Resend (`src/lib/email.ts`, env-gated): new booking / message alerts + customer confirmation.
+- **Admin dashboard** `/[locale]/admin` (gated by `ADMIN_EMAILS`, reads via service role): bookings list with status controls, messages inbox, subscribers, CSV export.
+
+**Phase 1 — conversion & core UX**
+- Homepage **quick-enquiry widget** (floats over hero; feeds `createBooking`; plane-takeoff success animation).
+- **Rich itinerary package pages**: at-a-glance facts, generated day-by-day **flight-route timeline** (plane travels the route as it draws in), what's-included, good-to-know, sticky enquiry aside.
+- Global **floating "Talk to a travel designer"** speed-dial CTA.
+
+**Phase 2 — discovery (in progress)**
+- **Packages filtering** (style + length) with spring reflow.
+- **Meet the travel designers** page (`/designers`) with tilt/reveal cards + footer link.
+- Reviews already render star ratings (testimonials). *Next:* review JSON-LD schema, and a **Journal/blog**.
+
+**Phase 3 (planned):** saved trip proposals in the client account, secure deposit/payment links, multi-currency, additional services (transfers/concierge).
+
+**New env vars:** `SUPABASE_SERVICE_ROLE_KEY`, `ADMIN_EMAILS`, `RESEND_API_KEY`, `EMAIL_FROM`, `BOOKINGS_NOTIFY_EMAIL`.
+
 ### Remaining to go fully live (not code — your inputs)
 - Supabase project URL + keys in `.env.local`; apply `supabase/` migrations + seed.
 - (Optional) real GLB models tuned in `scene.tsx`; local image pipeline; brand name/logo.

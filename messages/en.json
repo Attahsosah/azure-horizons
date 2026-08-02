@@ -69,6 +69,7 @@
     "about": "About us",
     "careers": "Careers",
     "press": "Press",
+    "team": "Travel designers",
     "privacy": "Privacy",
     "terms": "Terms",
     "cookies": "Cookies",
@@ -206,6 +207,21 @@
       "title": "The Azure Horizons gallery",
       "description": "Scenes from journeys around the world."
     },
+    "browse": {
+      "styleLabel": "Style",
+      "nightsLabel": "Length",
+      "all": "All",
+      "short": "Up to 4 nights",
+      "mid": "5–6 nights",
+      "long": "7+ nights",
+      "empty": "No packages match those filters."
+    },
+    "designers": {
+      "eyebrow": "The people behind the journey",
+      "title": "Meet your travel designers",
+      "description": "Every Azure Horizons journey is shaped by a designer who knows these places first-hand.",
+      "languages": "Speaks"
+    },
     "labels": {
       "from": "From",
       "nights": "nights"
@@ -229,7 +245,42 @@
     "destinationsDescription": "The full Azure Horizons collection.",
     "packagesEyebrow": "Curated",
     "packagesTitle": "All packages",
-    "packagesDescription": "Ready-made journeys to make your own."
+    "packagesDescription": "Ready-made journeys to make your own.",
+    "itinerary": {
+      "eyebrow": "Day by day",
+      "title": "Your journey, unfolded",
+      "dayLabel": "Day",
+      "arrivalTitle": "Arrival",
+      "arrivalBody": "A private transfer, a warm welcome, and an unhurried evening to settle in.",
+      "departureTitle": "Departure",
+      "departureBody": "A leisurely final morning before your private transfer onward — every detail handled.",
+      "highlightBody": "Your day is arranged around this — the timing, the guide, and every detail shaped to you.",
+      "freeTitle": "At your own pace",
+      "freeBody": "An open day to wander, rest, or add something spontaneous, with your designer on call."
+    },
+    "goodToKnow": {
+      "title": "Good to know",
+      "items": [
+        "International flights (arranged on request)",
+        "Travel insurance",
+        "Personal expenses and gratuities",
+        "Anything not listed under what's included"
+      ]
+    },
+    "glance": {
+      "title": "At a glance",
+      "nights": "Nights",
+      "style": "Style",
+      "from": "From",
+      "destination": "Destination"
+    }
+  },
+  "cta": {
+    "aria": "Talk to a travel designer",
+    "title": "Talk to a travel designer",
+    "body": "Tell us what you're dreaming of — we'll shape a journey around it.",
+    "plan": "Plan my trip",
+    "message": "Send a message"
   },
   "wishlist": {
     "eyebrow": "Saved",

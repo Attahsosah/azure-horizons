@@ -8,6 +8,7 @@ import "../globals.css";
 import { Footer } from "@/components/layout/footer";
 import { Header } from "@/components/layout/header";
 import { AuroraBackground } from "@/components/layout/aurora-background";
+import { FloatingDesignerCta } from "@/components/layout/floating-designer-cta";
 import { FlightPath } from "@/components/layout/flight-path";
 import { SmoothScroll } from "@/components/layout/smooth-scroll";
 import { TransitionOverlay } from "@/features/transitions/transition-overlay";
@@ -122,6 +123,7 @@ export default async function LocaleLayout({
             <Header authed={Boolean(user)} />
             <main id="main">{children}</main>
             <Footer />
+            <FloatingDesignerCta locale={locale} />
             <TransitionOverlay />
           </TransitionProvider>
         </I18nProvider>

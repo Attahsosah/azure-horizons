@@ -69,6 +69,7 @@
     "about": "À propos",
     "careers": "Carrières",
     "press": "Presse",
+    "team": "Concepteurs de voyage",
     "privacy": "Confidentialité",
     "terms": "Conditions",
     "cookies": "Cookies",
@@ -206,6 +207,21 @@
       "title": "La galerie Azure Horizons",
       "description": "Des scènes de voyages autour du monde."
     },
+    "browse": {
+      "styleLabel": "Style",
+      "nightsLabel": "Durée",
+      "all": "Tous",
+      "short": "Jusqu'à 4 nuits",
+      "mid": "5–6 nuits",
+      "long": "7+ nuits",
+      "empty": "Aucun forfait ne correspond à ces filtres."
+    },
+    "designers": {
+      "eyebrow": "Les personnes derrière le voyage",
+      "title": "Rencontrez vos concepteurs de voyage",
+      "description": "Chaque voyage Azure Horizons est façonné par un concepteur qui connaît ces lieux de première main.",
+      "languages": "Parle"
+    },
     "labels": {
       "from": "À partir de",
       "nights": "nuits"
@@ -229,7 +245,42 @@
     "destinationsDescription": "La collection Azure Horizons au complet.",
     "packagesEyebrow": "Sélection",
     "packagesTitle": "Tous les forfaits",
-    "packagesDescription": "Des voyages clés en main à personnaliser."
+    "packagesDescription": "Des voyages clés en main à personnaliser.",
+    "itinerary": {
+      "eyebrow": "Jour après jour",
+      "title": "Votre voyage, dévoilé",
+      "dayLabel": "Jour",
+      "arrivalTitle": "Arrivée",
+      "arrivalBody": "Un transfert privé, un accueil chaleureux et une soirée paisible pour vous installer.",
+      "departureTitle": "Départ",
+      "departureBody": "Une dernière matinée tranquille avant votre transfert privé — chaque détail pris en charge.",
+      "highlightBody": "Votre journée s'organise autour de cela — le rythme, le guide et chaque détail pensés pour vous.",
+      "freeTitle": "À votre rythme",
+      "freeBody": "Une journée libre pour flâner, vous reposer ou ajouter une envie spontanée, votre concepteur à l'écoute."
+    },
+    "goodToKnow": {
+      "title": "Bon à savoir",
+      "items": [
+        "Vols internationaux (organisés sur demande)",
+        "Assurance voyage",
+        "Dépenses personnelles et pourboires",
+        "Tout ce qui n'est pas listé dans les prestations incluses"
+      ]
+    },
+    "glance": {
+      "title": "En un coup d'œil",
+      "nights": "Nuits",
+      "style": "Style",
+      "from": "À partir de",
+      "destination": "Destination"
+    }
+  },
+  "cta": {
+    "aria": "Parler à un concepteur de voyage",
+    "title": "Parlez à un concepteur de voyage",
+    "body": "Dites-nous ce dont vous rêvez — nous concevrons un voyage autour de cela.",
+    "plan": "Planifier mon voyage",
+    "message": "Envoyer un message"
   },
   "wishlist": {
     "eyebrow": "Enregistré",

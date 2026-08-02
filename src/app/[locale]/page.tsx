@@ -102,7 +102,7 @@ export default async function Home({
         </Reveal>
       </Hero>
 
-      <QuickEnquiry locale={locale} destinations={destinations} />
+      <QuickEnquiry destinations={destinations} />
 
       <AboutUs locale={locale} />
 
