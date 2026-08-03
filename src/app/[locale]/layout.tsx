@@ -7,6 +7,7 @@ import "../globals.css";
 
 import { Footer } from "@/components/layout/footer";
 import { Header } from "@/components/layout/header";
+import { siteConfig, themeStyle } from "@/config/site";
 import { AuroraBackground } from "@/components/layout/aurora-background";
 import { FloatingDesignerCta } from "@/components/layout/floating-designer-cta";
 import { FlightPath } from "@/components/layout/flight-path";
@@ -43,7 +44,7 @@ export function generateStaticParams() {
 }
 
 export const viewport: Viewport = {
-  themeColor: "#0a1c33",
+  themeColor: siteConfig.theme.navy,
   width: "device-width",
   initialScale: 1,
 };
@@ -108,7 +109,10 @@ export default async function LocaleLayout({
       dir={getDirection(locale as Locale)}
       className={`${inter.variable} ${fraunces.variable}`}
     >
-      <body className="min-h-dvh bg-background text-foreground antialiased">
+      <body
+        className="min-h-dvh bg-background text-foreground antialiased"
+        style={themeStyle()}
+      >
         <AuroraBackground />
         <FlightPath />
         <I18nProvider locale={locale as Locale} dictionary={dict}>

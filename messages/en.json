@@ -70,10 +70,25 @@
     "careers": "Careers",
     "press": "Press",
     "team": "Travel designers",
+    "contact": "Contact",
     "privacy": "Privacy",
     "terms": "Terms",
     "cookies": "Cookies",
     "rights": "All rights reserved."
+  },
+  "legal": {
+    "privacy": {
+      "title": "Privacy Policy",
+      "body": "We respect your privacy. We collect only the information you provide when you enquire or book — such as your name, email, and travel preferences — and use it solely to plan and deliver your journey and to respond to you. We never sell your data. To request access to or deletion of your information, contact us any time.\n\nThis is a template policy — replace it with your agency's own privacy statement before going live."
+    },
+    "terms": {
+      "title": "Terms of Service",
+      "body": "By using this website and enquiring or booking with us, you agree to these terms. Enquiries are non-binding and no payment is required to request availability. Prices, availability, and inclusions are confirmed in your written proposal, and bookings, cancellations, and refunds follow the terms set out there.\n\nThis is a template — replace it with your agency's own terms before going live."
+    },
+    "cookies": {
+      "title": "Cookie Policy",
+      "body": "This site uses only the cookies necessary to remember your language preference and keep the site working. We do not use advertising or third-party tracking cookies. You can clear cookies at any time in your browser settings.\n\nThis is a template — replace it with your agency's own cookie policy before going live."
+    }
   },
   "notFound": {
     "title": "This horizon is out of reach",

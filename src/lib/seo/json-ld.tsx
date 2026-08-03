@@ -1,3 +1,5 @@
+import { siteConfig } from "@/config/site";
+
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
 
 /** Renders a JSON-LD script tag. Safe in Server Components. */
@@ -14,7 +16,7 @@ export function travelAgencyLd() {
   return {
     "@context": "https://schema.org",
     "@type": "TravelAgency",
-    name: "Azure Horizons",
+    name: siteConfig.name,
     url: siteUrl,
     description:
       "Cinematic journeys to the world's most extraordinary destinations.",

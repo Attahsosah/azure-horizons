@@ -70,10 +70,25 @@
     "careers": "Carrières",
     "press": "Presse",
     "team": "Concepteurs de voyage",
+    "contact": "Contact",
     "privacy": "Confidentialité",
     "terms": "Conditions",
     "cookies": "Cookies",
     "rights": "Tous droits réservés."
+  },
+  "legal": {
+    "privacy": {
+      "title": "Politique de confidentialité",
+      "body": "Nous respectons votre vie privée. Nous ne recueillons que les informations que vous fournissez lors d'une demande ou d'une réservation — nom, e-mail et préférences de voyage — et les utilisons uniquement pour concevoir et organiser votre voyage et vous répondre. Nous ne vendons jamais vos données. Pour accéder à vos informations ou en demander la suppression, contactez-nous à tout moment.\n\nCeci est un modèle — remplacez-le par la politique de confidentialité de votre agence avant la mise en ligne."
+    },
+    "terms": {
+      "title": "Conditions d'utilisation",
+      "body": "En utilisant ce site et en nous contactant ou en réservant, vous acceptez ces conditions. Les demandes ne sont pas contraignantes et aucun paiement n'est requis pour vérifier les disponibilités. Les prix, disponibilités et prestations sont confirmés dans votre proposition écrite ; les réservations, annulations et remboursements suivent les conditions qui y sont indiquées.\n\nCeci est un modèle — remplacez-le par les conditions de votre agence avant la mise en ligne."
+    },
+    "cookies": {
+      "title": "Politique relative aux cookies",
+      "body": "Ce site n'utilise que les cookies nécessaires pour mémoriser votre préférence de langue et assurer son bon fonctionnement. Nous n'utilisons pas de cookies publicitaires ni de traceurs tiers. Vous pouvez effacer les cookies à tout moment dans les paramètres de votre navigateur.\n\nCeci est un modèle — remplacez-le par la politique relative aux cookies de votre agence avant la mise en ligne."
+    }
   },
   "notFound": {
     "title": "Cet horizon est hors de portée",

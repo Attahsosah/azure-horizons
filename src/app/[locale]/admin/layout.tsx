@@ -2,6 +2,7 @@ import Link from "next/link";
 import { notFound, redirect } from "next/navigation";
 import type { ReactNode } from "react";
 
+import { siteConfig } from "@/config/site";
 import { SignOutButton } from "@/features/auth/sign-out-button";
 import { getAdminUser } from "@/lib/auth/admin";
 import { isLocale, type Locale } from "@/lib/i18n/config";
@@ -36,7 +37,7 @@ export default async function AdminLayout({
       <header className="mb-8 flex flex-wrap items-center justify-between gap-4 border-b border-border pb-6">
         <div>
           <p className="text-xs uppercase tracking-[0.24em] text-turquoise">
-            Azure Horizons
+            {siteConfig.name}
           </p>
           <h1 className="font-display text-fluid-2xl text-navy">
             {resolveText(dict, "admin.title")}

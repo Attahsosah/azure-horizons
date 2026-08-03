@@ -1,5 +1,6 @@
 "use server";
 
+import { siteConfig } from "@/config/site";
 import { sendEmail, notifyAddress } from "@/lib/email";
 import { isSupabaseConfigured } from "@/lib/supabase/config";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
@@ -103,7 +104,7 @@ export async function createBooking(input: unknown): Promise<BookingResult> {
   await sendEmail({
     to: v.customerEmail,
     subject: `We've received your enquiry (${reference})`,
-    html: `<p>Thank you, ${esc(v.customerName)}.</p><p>We've received your enquiry <strong>${esc(reference)}</strong> and a travel designer will be in touch within one business day.</p><p>— Azure Horizons</p>`,
+    html: `<p>Thank you, ${esc(v.customerName)}.</p><p>We've received your enquiry <strong>${esc(reference)}</strong> and a travel designer will be in touch within one business day.</p><p>— ${esc(siteConfig.name)}</p>`,
   });
 
   return { ok: true, reference };

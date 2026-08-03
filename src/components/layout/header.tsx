@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { Compass, Menu } from "lucide-react";
 
+import { siteConfig } from "@/config/site";
 import { MobileNav } from "@/components/layout/mobile-nav";
 import { LanguageSwitcher } from "@/components/layout/language-switcher";
 import { NAV_KEYS } from "@/components/layout/nav";
@@ -41,7 +42,7 @@ export function Header({ authed }: { authed: boolean }) {
             className="flex items-center gap-2 font-display text-lg font-semibold tracking-tight text-foreground"
           >
             <Compass className="size-5 text-primary" aria-hidden="true" />
-            <span>Azure Horizons</span>
+            <span>{siteConfig.name}</span>
           </TransitionLink>
           <LanguageSwitcher className="md:hidden" />
         </div>

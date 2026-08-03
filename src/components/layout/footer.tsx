@@ -2,6 +2,7 @@
 
 import { Compass } from "lucide-react";
 
+import { siteConfig } from "@/config/site";
 import { NAV_KEYS } from "@/components/layout/nav";
 import { TransitionLink } from "@/features/transitions/transition-link";
 import { useI18n } from "@/lib/i18n/provider";
@@ -28,8 +29,7 @@ export function Footer() {
       links: [
         { label: t("footer.about"), href: `${home}/about` },
         { label: t("footer.team"), href: `${home}/designers` },
-        { label: t("footer.careers"), href: `${home}/careers` },
-        { label: t("footer.press"), href: `${home}/press` },
+        { label: t("footer.contact"), href: `${home}#contact` },
       ],
     },
     {
@@ -48,7 +48,7 @@ export function Footer() {
         <div className="space-y-3">
           <span className="flex items-center gap-2 font-display text-lg font-semibold text-foreground">
             <Compass className="size-5 text-primary" aria-hidden="true" />
-            Azure Horizons
+            {siteConfig.name}
           </span>
           <p className="max-w-xs text-sm text-muted-foreground">
             {t("footer.tagline")}
@@ -78,7 +78,7 @@ export function Footer() {
 
       <div className="border-t border-border">
         <div className="mx-auto max-w-7xl px-6 py-6 text-sm text-muted-foreground">
-          © {year} Azure Horizons. {t("footer.rights")}
+          © {year} {siteConfig.name}. {t("footer.rights")}
         </div>
       </div>
     </footer>
