@@ -1,4 +1,7 @@
 import { ExportCsvButton } from "@/features/admin/export-csv-button";
+import { isLocale, type Locale } from "@/lib/i18n/config";
+import { getDictionary } from "@/lib/i18n/dictionaries";
+import { resolveText } from "@/lib/i18n/resolve";
 import {
   createSupabaseAdminClient,
   isAdminConfigured,
@@ -14,12 +17,18 @@ type SubscriberRow = {
 
 export const dynamic = "force-dynamic";
 
-export default async function AdminSubscribersPage() {
+export default async function AdminSubscribersPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  const dict = await getDictionary(isLocale(locale) ? (locale as Locale) : "en");
+
   if (!isAdminConfigured()) {
     return (
       <p className="rounded-xl border border-border bg-card p-6 text-sm text-muted-foreground">
-        Set <code className="font-mono">SUPABASE_SERVICE_ROLE_KEY</code> to view
-        subscribers here.
+        {resolveText(dict, "admin.notConfigured")}
       </p>
     );
   }
@@ -34,22 +43,30 @@ export default async function AdminSubscribersPage() {
     <section>
       <div className="mb-4 flex items-center justify-between gap-4">
         <h2 className="font-display text-fluid-xl text-navy">
-          Subscribers{" "}
+          {resolveText(dict, "admin.subscribers")}{" "}
           <span className="text-muted-foreground">({subs.length})</span>
         </h2>
         <ExportCsvButton rows={subs} filename="subscribers.csv" />
       </div>
 
       {subs.length === 0 ? (
-        <p className="text-muted-foreground">No subscribers yet.</p>
+        <p className="text-muted-foreground">
+          {resolveText(dict, "admin.noSubscribers")}
+        </p>
       ) : (
         <div className="overflow-x-auto rounded-xl border border-border">
           <table className="w-full text-left text-sm">
             <thead className="bg-secondary text-muted-foreground">
               <tr>
-                <th className="px-4 py-3 font-medium">Email</th>
-                <th className="px-4 py-3 font-medium">Locale</th>
-                <th className="px-4 py-3 font-medium">Joined</th>
+                <th className="px-4 py-3 font-medium">
+                  {resolveText(dict, "admin.colEmail")}
+                </th>
+                <th className="px-4 py-3 font-medium">
+                  {resolveText(dict, "admin.colLocale")}
+                </th>
+                <th className="px-4 py-3 font-medium">
+                  {resolveText(dict, "admin.colJoined")}
+                </th>
               </tr>
             </thead>
             <tbody>

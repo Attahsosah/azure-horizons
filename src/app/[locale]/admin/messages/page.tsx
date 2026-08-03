@@ -1,4 +1,7 @@
 import { ExportCsvButton } from "@/features/admin/export-csv-button";
+import { isLocale, type Locale } from "@/lib/i18n/config";
+import { getDictionary } from "@/lib/i18n/dictionaries";
+import { resolveText } from "@/lib/i18n/resolve";
 import {
   createSupabaseAdminClient,
   isAdminConfigured,
@@ -15,12 +18,18 @@ type MessageRow = {
 
 export const dynamic = "force-dynamic";
 
-export default async function AdminMessagesPage() {
+export default async function AdminMessagesPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  const dict = await getDictionary(isLocale(locale) ? (locale as Locale) : "en");
+
   if (!isAdminConfigured()) {
     return (
       <p className="rounded-xl border border-border bg-card p-6 text-sm text-muted-foreground">
-        Set <code className="font-mono">SUPABASE_SERVICE_ROLE_KEY</code> to view
-        messages here.
+        {resolveText(dict, "admin.notConfigured")}
       </p>
     );
   }
@@ -35,14 +44,16 @@ export default async function AdminMessagesPage() {
     <section>
       <div className="mb-4 flex items-center justify-between gap-4">
         <h2 className="font-display text-fluid-xl text-navy">
-          Messages{" "}
+          {resolveText(dict, "admin.messages")}{" "}
           <span className="text-muted-foreground">({messages.length})</span>
         </h2>
         <ExportCsvButton rows={messages} filename="messages.csv" />
       </div>
 
       {messages.length === 0 ? (
-        <p className="text-muted-foreground">No messages yet.</p>
+        <p className="text-muted-foreground">
+          {resolveText(dict, "admin.noMessages")}
+        </p>
       ) : (
         <ul className="space-y-4">
           {messages.map((m) => (

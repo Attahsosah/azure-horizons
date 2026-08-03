@@ -2,6 +2,9 @@ import type { ReactNode } from "react";
 
 import { BookingStatusControl } from "@/features/admin/booking-status-control";
 import { ExportCsvButton } from "@/features/admin/export-csv-button";
+import { isLocale, type Locale } from "@/lib/i18n/config";
+import { getDictionary } from "@/lib/i18n/dictionaries";
+import { resolveText } from "@/lib/i18n/resolve";
 import {
   createSupabaseAdminClient,
   isAdminConfigured,
@@ -24,9 +27,20 @@ type BookingRow = {
 
 export const dynamic = "force-dynamic";
 
-export default async function AdminBookingsPage() {
+export default async function AdminBookingsPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  const dict = await getDictionary(isLocale(locale) ? (locale as Locale) : "en");
+
   if (!isAdminConfigured()) {
-    return <NotConfigured />;
+    return (
+      <p className="rounded-xl border border-border bg-card p-6 text-sm text-muted-foreground">
+        {resolveText(dict, "admin.notConfigured")}
+      </p>
+    );
   }
 
   const { data } = await createSupabaseAdminClient()
@@ -39,26 +53,28 @@ export default async function AdminBookingsPage() {
     <section>
       <div className="mb-4 flex items-center justify-between gap-4">
         <h2 className="font-display text-fluid-xl text-navy">
-          Bookings{" "}
+          {resolveText(dict, "admin.bookings")}{" "}
           <span className="text-muted-foreground">({bookings.length})</span>
         </h2>
         <ExportCsvButton rows={bookings} filename="bookings.csv" />
       </div>
 
       {bookings.length === 0 ? (
-        <p className="text-muted-foreground">No bookings yet.</p>
+        <p className="text-muted-foreground">
+          {resolveText(dict, "admin.noBookings")}
+        </p>
       ) : (
         <div className="overflow-x-auto rounded-xl border border-border">
           <table className="w-full min-w-[900px] text-left text-sm">
             <thead className="bg-secondary text-muted-foreground">
               <tr>
-                <Th>Reference</Th>
-                <Th>Customer</Th>
-                <Th>Destination</Th>
-                <Th>Dates</Th>
-                <Th>Guests</Th>
-                <Th>Tier</Th>
-                <Th>Status</Th>
+                <Th>{resolveText(dict, "admin.colReference")}</Th>
+                <Th>{resolveText(dict, "admin.colCustomer")}</Th>
+                <Th>{resolveText(dict, "admin.colDestination")}</Th>
+                <Th>{resolveText(dict, "admin.colDates")}</Th>
+                <Th>{resolveText(dict, "admin.colGuests")}</Th>
+                <Th>{resolveText(dict, "admin.colTier")}</Th>
+                <Th>{resolveText(dict, "admin.colStatus")}</Th>
               </tr>
             </thead>
             <tbody>
@@ -96,13 +112,4 @@ export default async function AdminBookingsPage() {
 
 function Th({ children }: { children: ReactNode }) {
   return <th className="px-4 py-3 font-medium">{children}</th>;
-}
-
-function NotConfigured() {
-  return (
-    <p className="rounded-xl border border-border bg-card p-6 text-sm text-muted-foreground">
-      Set <code className="font-mono">SUPABASE_SERVICE_ROLE_KEY</code> in your
-      environment to view and manage bookings here.
-    </p>
-  );
 }

@@ -18,6 +18,7 @@ export function FloatingDesignerCta({ locale }: { locale: string }) {
   const reduce = useReducedMotion();
   const [open, setOpen] = useState(false);
   const home = `/${locale}`;
+  const whatsapp = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER;
 
   return (
     <div className="fixed bottom-5 right-5 z-[80] flex flex-col items-end gap-3">
@@ -46,6 +47,19 @@ export function FloatingDesignerCta({ locale }: { locale: string }) {
                 <Plane className="size-4" aria-hidden="true" />
                 {t("cta.plan")}
               </Link>
+              {whatsapp && (
+                <a
+                  href={`https://wa.me/${whatsapp}?text=${encodeURIComponent(t("cta.whatsappText"))}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => setOpen(false)}
+                  className="inline-flex items-center justify-center gap-2 rounded-full px-4 py-2.5 text-sm font-semibold text-white"
+                  style={{ backgroundColor: "#25D366" }}
+                >
+                  <MessageCircle className="size-4" aria-hidden="true" />
+                  {t("cta.whatsapp")}
+                </a>
+              )}
               <Link
                 href={`${home}#contact`}
                 onClick={() => setOpen(false)}

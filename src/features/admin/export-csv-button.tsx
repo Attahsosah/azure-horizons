@@ -1,5 +1,7 @@
 "use client";
 
+import { useI18n } from "@/lib/i18n/provider";
+
 /** Client-side CSV export of already-fetched rows — no server round-trip. */
 export function ExportCsvButton({
   rows,
@@ -8,6 +10,8 @@ export function ExportCsvButton({
   rows: Record<string, unknown>[];
   filename: string;
 }) {
+  const { t } = useI18n();
+
   function download() {
     if (rows.length === 0) return;
     const headers = Object.keys(rows[0]!);
@@ -35,7 +39,7 @@ export function ExportCsvButton({
       disabled={rows.length === 0}
       className="rounded-full border border-border px-4 py-2 text-sm font-medium hover:bg-secondary disabled:opacity-50"
     >
-      Export CSV
+      {t("admin.exportCsv")}
     </button>
   );
 }
