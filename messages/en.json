@@ -129,6 +129,30 @@
       "again": "Send another enquiry",
       "error": "Something went wrong. Please try again."
     },
+    "services": {
+      "eyebrow": "What we do",
+      "title": "Everything your journey needs",
+      "description": "One trusted team for every part of your trip.",
+      "cta": "Enquire",
+      "items": {
+        "flights": {
+          "title": "Flights & ticketing",
+          "description": "Competitive fares and reliable air ticketing to anywhere you need to go."
+        },
+        "stays": {
+          "title": "Hotels & stays",
+          "description": "Handpicked hotels and accommodation matched to your route and budget."
+        },
+        "tours": {
+          "title": "Tours & experiences",
+          "description": "Guided tours and tailor-made experiences, arranged around you."
+        },
+        "visa": {
+          "title": "Visa assistance",
+          "description": "Guidance and support with visa applications and travel documents."
+        }
+      }
+    },
     "featured": {
       "eyebrow": "Featured",
       "title": "Signature destinations",

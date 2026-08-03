@@ -48,14 +48,25 @@ export interface SiteFeatures {
   designers: boolean;
 }
 
+/** A service offered by the agency. `icon` maps to an icon in the Services
+ *  section; text lives in the `sections.services.items.<key>` dictionary. */
+export interface ServiceItem {
+  key: string;
+  icon: "plane" | "bed" | "compass" | "visa";
+}
+
 export interface SiteConfig {
   name: string;
   tagline: string;
+  /** Optional path to a logo image in /public (e.g. "/logo.png"). When set, it
+   *  replaces the icon + name lockup in the header, footer, and mobile nav. */
+  logo?: string;
   defaultCurrency: string;
   contact: SiteContact;
   socials: SiteSocials;
   theme: SiteTheme;
   features: SiteFeatures;
+  services: ServiceItem[];
 }
 
 export const siteConfig: SiteConfig = {
@@ -83,6 +94,12 @@ export const siteConfig: SiteConfig = {
     booking: true,
     designers: true,
   },
+  services: [
+    { key: "flights", icon: "plane" },
+    { key: "stays", icon: "bed" },
+    { key: "tours", icon: "compass" },
+    { key: "visa", icon: "visa" },
+  ],
 };
 
 /** CSS-variable overrides applied to <body> so `theme` re-colours the UI. */

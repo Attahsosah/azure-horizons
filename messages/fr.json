@@ -129,6 +129,30 @@
       "again": "Envoyer une autre demande",
       "error": "Une erreur s'est produite. Veuillez réessayer."
     },
+    "services": {
+      "eyebrow": "Nos services",
+      "title": "Tout ce dont votre voyage a besoin",
+      "description": "Une équipe de confiance pour chaque étape de votre voyage.",
+      "cta": "Demander",
+      "items": {
+        "flights": {
+          "title": "Billets d'avion",
+          "description": "Des tarifs compétitifs et une billetterie fiable vers toutes vos destinations."
+        },
+        "stays": {
+          "title": "Réservation d'hôtel",
+          "description": "Des hôtels sélectionnés selon votre itinéraire et votre budget."
+        },
+        "tours": {
+          "title": "Services touristiques",
+          "description": "Visites guidées et expériences sur mesure, organisées pour vous."
+        },
+        "visa": {
+          "title": "Assistance visa",
+          "description": "Accompagnement pour vos demandes de visa et documents de voyage."
+        }
+      }
+    },
     "featured": {
       "eyebrow": "À la une",
       "title": "Destinations signature",
